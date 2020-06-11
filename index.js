@@ -85,7 +85,7 @@ function CalcSensitivity() {
         }
 
     }
-    document.getElementById("sensitivitybyweight").innerHTML = ("Your carb sensitivity is: " + result);
+    document.getElementById("sensitivitybyweight").innerHTML = ("Su censibilidad por carbohidrato es: " + result);
     document.getElementById("CarbSensitivity").value = result;
 }    
 
