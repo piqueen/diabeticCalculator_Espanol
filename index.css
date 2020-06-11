@@ -95,13 +95,13 @@ td input{
 
 @media (min-width: 700px) {
     #containerRight{
-        height: 300px;
+        height: 45%;
         float: right;
         align-self: left;
         width: 40%;
     }
     #containerLeft{
-        height: 300px;
+        height: 45%;
         width: 40%;
         float:left;
         align-self: left;
