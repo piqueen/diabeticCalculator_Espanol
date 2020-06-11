@@ -10,10 +10,10 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: salmon;
     margin: 2% 2% 2% 5%;
-    font-size: 1em;
+    font-size: .75em;
 }
 .header img{
-    width: 1em;
+    width: .75em;
 }
 .header div {
     text-align: center;
@@ -95,13 +95,13 @@ td input{
 
 @media (min-width: 700px) {
     #containerRight{
-        height: 400px;
+        height: 300px;
         float: right;
         align-self: left;
         width: 40%;
     }
     #containerLeft{
-        height: 400px;
+        height: 300px;
         width: 40%;
         float:left;
         align-self: left;
