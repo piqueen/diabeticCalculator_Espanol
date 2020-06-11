@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es"
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculadora para Diabeticos</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Calculadora para Diabeticos <img src="calculator.svg"></h1>
+        <div>
+            <p>Important: Por favor utilize esta herramienta como referencia. Esta herramienta no debe sustituir el consejo de su doctor.</p>
+            <p><b>CREADO POR UNA DIABETICA PARA OTROS DIABETICOS</b></p>
+        </div>
+    </div>
+    <!-- <div class="row"> -->
+        <div class="sm-col-6 xs-col-6 xxs-col-12 lg-col-6 md-col-6 xl-col-6" id="containerLeft">
+            <h3>Entre su nivel de azucar actual <input type="number" id="bscurrent">mg/dl</h3>
+            <span>Sensibilidad por Carbohidratos
+                <div class="tooltip">
+                    <span class="material-icons">
+                        help_outline</span>
+                    <span class="tooltiptext">No sabe cual es? Calcule abajo.</span>
+                </div>
+                <input type="number" id="CarbSensitivity" step="0.01" min="0" max="10"></input>
+            </span><br>
+            <span>Carbohidratos por comer
+                <input type="number" id="CarbsToEat"></input>
+            </span><br>
+            <button onclick="CalcRise()">Calcular</button>
+            <div id="bsafter"></div>
+            <p id="insulinTotake"></p>
+            <h3>Calcule su sensibilidad por carbohidratos</h3>
+            <div id="CalcCarbSensitivity">
+                <div>Entre su peso <input type="number" value="0" id="weight">lbs</div>
+                <button onclick="CalcSensitivity()">Calcular</button>
+            </div>
+            <span id="sensitivitybyweight"><b></b></span></span>
+        </div>
+        <div class="sm-col-6 xs-col-6 xxs-col-12 lg-col-6 md-col-6 xl-col-6" id="containerRight">
+            <div id="CalcTarget">
+                <h3>Tiene azucar baja?</h3>
+                <p>Calcule cuantos carbohidratos debe comer para elevar su nivel de azucar</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="targetBS"> Nivel de azucar ideal</label></td>
+                            <td><input id="targetBS" type="number" name="targetBS"></td>    
+                        </tr>
+                        <tr>
+                            <td><lable for="targetCBS">Nivel de azucar actual</lable></td>
+                            <td><input id="targetCBS" type="number" name="targetCBS"></td>
+                        </tr>
+                        <tr>
+                            <td>Sensibilidad por carbohidratos</td>
+                            <td><input id="targetCS" type="number"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button onclick="CalcTarget()">Calcular</button>
+                <div id="carbsneeded"></div>
+            </div>
+        </div>
+    <!-- </div> -->
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+.header{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: salmon;
+    margin: 2% 2% 2% 5%;
+    font-size: 1em;
+}
+.header img{
+    width: 1em;
+}
+.header div {
+    text-align: center;
+    font-size: small;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border: 1px dotted black;
+}
+
+.tooltip .tooltiptext{
+    visibility: hidden;
+    width: 100px;
+    background-color:lightpink;
+    color: black;
+    text-align: center;
+    border-radius: 3px;
+    position: absolute;
+    
+}
+.tooltip:hover .tooltiptext{
+    visibility: visible ;
+}
+#containerLeft{
+    margin: 3%;
+    background-color:#FEEAE6 ;
+    border: 2px solid black ;
+    border-radius: 15px;
+    padding: 3%;
+    font-family: sans-serif;
+    color: #442C2E;
+}
+#containerRight {
+    margin: 3%;
+    background-color:#FEEAE6 ;
+    border: 2px solid black ;
+    border-radius: 15px;
+    padding: 3%;
+    font-family: sans-serif;
+    color: #442C2E;
+}
+#BSrise{
+    font-weight: bold;
+    color: red;
+}
+#CarbsToEat, #weight, #bscurrent, #CarbSensitivity {
+    width: 15%;
+}
+#insulinTotake, #bsafter, #carbsneeded{
+    font-size: 1em;
+    color: mediumvioletred;
+    font-weight: bold;
+}
+
+button{
+    background-color: white;
+    border-style: double;
+    font-weight: bold;
+    margin: 10px;
+    width: 40%;
+    border: 1px dotted #442C2E;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: lightpink;
+}
+
+.footer{
+    font-size: small; 
+}
+table, td{
+    text-align: center;
+    margin: 5% 15%;
+}
+td input{
+    width: 45%;
+}
+
+@media (min-width: 700px) {
+    #containerRight{
+        height: 400px;
+        float: right;
+        align-self: left;
+        width: 40%;
+    }
+    #containerLeft{
+        height: 400px;
+        width: 40%;
+        float:left;
+        align-self: left;
+    }
+}
+
