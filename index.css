@@ -63,7 +63,7 @@ body{
 #CarbsToEat, #weight, #bscurrent, #CarbSensitivity {
     width: 15%;
 }
-#insulinTotake, #bsafter, #carbsneeded{
+#insulinTotake, #bsafter, #carbsneeded, #sensitivitybyweight{
     font-size: 1em;
     color: mediumvioletred;
     font-weight: bold;

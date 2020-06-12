@@ -5,10 +5,22 @@ function CalcRise() {
     var total = CarbSensitivity * CarbsToEat;
     var bloodsugar= CurrentBS+total;
     var fixed = bloodsugar.toFixed(1);
-    document.getElementById("bsafter").innerHTML=("Su nivel de azucar puede subir a: " + fixed +"mg/dl");
     var insulinTotake= (CarbsToEat/CarbSensitivity);
     var fixed2 = insulinTotake.toFixed(1);
-    document.getElementById("insulinTotake").innerHTML=("Recomendacion de insuline " + fixed2+ " unidades");
+        if(CarbSensitivity== 0 || CarbSensitivity == " " || CarbSensitivity==NaN){
+            document.getElementById("bsafter").innerHTML=("Porfavor llene los espacios en blanco");
+    }
+        else if(CarbsToEat== 0 || CarbsToEat == " " || CarbsToEat==NaN){
+            document.getElementById("bsafter").innerHTML=("Porfavor llene los espacios en blanco");
+    }
+        else if(CurrentBS== 0 || CurrentBS == " " || CurrentBS==NaN){
+            document.getElementById("bsafter").innerHTML=("Porfavor llene los espacios en blanco");
+    }
+    else {
+        document.getElementById("insulinTotake").innerHTML=("Recomendacion de insuline " + fixed2+ " unidades");
+        document.getElementById("bsafter").innerHTML=("Su nivel de azucar puede subir a: " + fixed +"mg/dl");
+
+    }
 }
 
 function CalcSensitivity() {
@@ -85,8 +97,14 @@ function CalcSensitivity() {
         }
 
     }
-    document.getElementById("sensitivitybyweight").innerHTML = ("Su censibilidad por carbohidrato es: " + result);
-    document.getElementById("CarbSensitivity").value = result;
+    if(weight== 0 || weight == " " || weight==NaN){
+        document.getElementById("sensitivitybyweight").innerHTML = ("Porfavor llene los espacios en blanco");
+    }
+    else{
+        document.getElementById("sensitivitybyweight").innerHTML = ("Su sensibilidad por carbohidrato es: " + result);
+        document.getElementById("CarbSensitivity").value = result;
+    }
+
 }    
 
 function CalcTarget(){
@@ -99,6 +117,15 @@ function CalcTarget(){
         document.getElementById("carbsneeded").innerHTML=("No es necesario, estas bien!");
     }
     else if(fixed3 == Infinity){
+        document.getElementById("carbsneeded").innerHTML=("Porfavor llene los espacios en blanco");
+    }
+    else if(currentBS == 0 || currentBS == " " || currentBS==NaN){
+        document.getElementById("carbsneeded").innerHTML=("Porfavor llene los espacios en blanco");
+    }
+    else if(targetBS == 0 || targetBS == " " || targetBS==NaN){
+        document.getElementById("carbsneeded").innerHTML=("Porfavor llene los espacios en blanco");
+    }
+    else if(carbSensitivity == 0 || carbSensitivity == " " || carbSensitivity==NaN){
         document.getElementById("carbsneeded").innerHTML=("Porfavor llene los espacios en blanco");
     }
     else{
